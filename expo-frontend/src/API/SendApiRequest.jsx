@@ -7,7 +7,7 @@ export const ApiRequest =  async(Data) =>{
     name:Data.Name,
     password:Data.Password
   }
-  const url = "http://localhost:2009/Api/Register"
+  const url = "https://serverside-liart.vercel.app/Api/Register"
   return (axios.post(url,Data1))
 }
 export const LoginRequest = async(Data) =>{
@@ -15,7 +15,7 @@ export const LoginRequest = async(Data) =>{
     name:Data.Name,
     password:Data.Password
   }
-  const url = "http://localhost:2009/Api/login"
+  const url = "https://serverside-liart.vercel.app/Api/login"
   return (axios.post(url,Data1))
 }
 export const Messageapi = async(Data) =>{
@@ -27,10 +27,10 @@ export const Messageapi = async(Data) =>{
     PostedBy:decodetoken.id.name
   }
   console.log(Data2);
-  const url = "http://localhost:2009/Api/chat"
+  const url = "https://serverside-liart.vercel.app/Api/chat"
   return (axios.post(url,Data2))
 }
 export const searchMessageapi = async()=>{
-  const url = "http://localhost:2009/Api/searchChat"
+  const url = "https://serverside-liart.vercel.app/Api/searchChat"
     return axios.get(url)
 }
